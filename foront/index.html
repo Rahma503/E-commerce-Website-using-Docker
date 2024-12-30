@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Shopping Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation Icons */
+        #cart-icon, #profile-icon {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        #cart-icon:hover, #profile-icon:hover {
+            color: #ddd;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+        }
+
+        /* Product List Styles */
+        #product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product {
+            width: 200px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        /* Cart Icon */
+        .fas {
+            font-size: 24px;
+        }
+
+        /* Footer Styles (Optional) */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcomeeeeee to the Online Shopping Platform</h1>
+        <a href="cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+        <a href="profile.html" id="profile-icon"><i class="fas fa-user"></i></a>
+    </header>
+    <main>
+        <div id="product-list">
+            <!-- Product list will be dynamically generated -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Online Shopping Platform. All rights reserved.</p>
+    </footer>
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: C:\Users\rahma\OneDrive - Faculty of Computer and Information Sciences (Ain Shams University)\Desktop\proj_clo\foront
+      dockerfile: Dockerfile  # Name of the Dockerfile for frontend
+    image: frontend-image
+    ports:
+      - "1900:80"
+    depends_on:
+      - backend
+    networks:
+       - web-app-net
+
+  backend:
+    build:
+      context: C:\Users\rahma\OneDrive - Faculty of Computer and Information Sciences (Ain Shams University)\Desktop\proj_clo\back
+      dockerfile: Dockerfile  # Name of the Dockerfile for backend
+    image: backend-image
+    ports:
+      - "8080:3000"
+    depends_on:
+      - db
+    networks:
+       - web-app-net
+
+  db:
+    image: postgres
+    ports:
+      - "4321:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=testUser
+    networks:
+       - web-app-net
+
+networks:
+  web-app-net:
